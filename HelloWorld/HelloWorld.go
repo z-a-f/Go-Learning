@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
-	fmt.Println("Hello World!")
-	var age int = 40
-	var favNum float64 = 1.64356
-	randNum := 1
+	rand.Seed( time.Now().UTC().UnixNano())
+	r := rand.Intn(100)
+	fmt.Printf ("%d. HelloWorld!\n", r)
+
 }
